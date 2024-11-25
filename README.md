@@ -9,6 +9,6 @@ Students are expected to:
 Student Info
 =========================
 
-* Student Name: Nguyen Tai Anb
+* Student Name: Nguyen Tai Anh
 * Student ID: 22BI13028
-* Student Group ID: I dont know
+* Student Group ID: 1   
