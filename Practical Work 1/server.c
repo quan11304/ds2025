@@ -15,7 +15,7 @@ void write_file(int sockfd)
     fp = fopen(filename, "w");
     if(fp==NULL)
     {
-        perror("[-]Error in creating file.");
+        perror("Error in creating file.");
         exit(1);
     }
     while(1)
@@ -47,10 +47,10 @@ int main ()
     sockfd = socket(AF_INET, SOCK_STREAM, 0);
     if(sockfd<0)
     {
-        perror("[-]Error in socket");
+        perror("Error in socket");
         exit(1);
     }
-     printf("[+]Server socket created. \n");
+     printf("Server socket created. \n");
 
      server_addr.sin_family = AF_INET;
      server_addr.sin_port = port;
@@ -59,24 +59,24 @@ int main ()
      e = bind(sockfd,(struct sockaddr*)&server_addr, sizeof(server_addr));
      if(e<0)
      {
-         perror("[-]Error in Binding");
+         perror("Error in Binding");
          exit(1);
      }
-     printf("[+]Binding Successfull.\n");
+     printf("Binding Successfull.\n");
 
      e = listen(sockfd, 10);
      if(e==0)
      {
-         printf("[+]Listening...\n");
+         printf("Listening...\n");
      }
      else 
      {
-         perror("[-]Error in Binding");
+         perror("Error in Binding");
          exit(1);
      }
      addr_size = sizeof(new_addr);
      new_sock = accept(sockfd,(struct sockaddr*)&new_addr, &addr_size);
 
      write_file(new_sock);
-     printf("[+]Data written in the text file ");
+     printf("Data written in the text file ");
 }
