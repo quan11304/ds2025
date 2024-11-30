@@ -23,7 +23,7 @@ void send_file(FILE *fp, int sockfd)
 
 int main()
 {
-    char *ip = "127.0.0.1";
+    char *ip = "127.0.0.1"; //Change to server address to send file in need
     int port = 8080;
     int e;
 
